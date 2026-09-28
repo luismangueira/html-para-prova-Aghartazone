@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Crie seu perfil de artista no AghartaZone e compartilhe suas obras.">
+<title>Perfil | AghartaZone</title>
+</head>
+<body>
+<header>
+  <a href="index.html"><img src="../img/logo-aghartazone.png" alt="Logo do AghartaZone: o ideograma 終章 sobre um símbolo de lua e estrelas roxas" width="220" height="137"></a>
+  <p>AghartaZone — o acervo de arte de todos os estilos</p>
+  <nav aria-label="Menu principal">
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="obras.html">Obras</a></li>
+      <li><a href="artistas.html">Artistas</a></li>
+      <li><a href="perfil.html" aria-current="page">Perfil</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h1>Crie seu perfil de artista</h1>
+  <p>Campos marcados com <abbr title="obrigatório">*</abbr> são obrigatórios.</p>
+
+  <section>
+    <h2>Formulário de cadastro</h2>
+    <form action="perfil.html" method="get">
+      <fieldset>
+        <legend>Dados do artista</legend>
+        <p>
+          <label for="nome">Nome artístico *</label><br>
+          <input type="text" id="nome" name="nome" placeholder="Ex.: Luna Vega" minlength="2" maxlength="60" required>
+        </p>
+        <p>
+          <label for="email">E-mail *</label><br>
+          <input type="email" id="email" name="email" placeholder="voce@exemplo.com" required>
+        </p>
+        <p>
+          <label for="nascimento">Data de nascimento *</label><br>
+          <input type="date" id="nascimento" name="nascimento" min="1900-01-01" max="2026-09-28" required>
+        </p>
+        <p>
+          <label for="pais">País</label><br>
+          <input type="text" id="pais" name="pais" list="lista-paises" placeholder="Comece a digitar...">
+          <datalist id="lista-paises">
+            <option value="Brasil">
+            <option value="Portugal">
+            <option value="França">
+            <option value="Estados Unidos">
+            <option value="Japão">
+            <option value="Reino Unido">
+          </datalist>
+        </p>
+        <p>
+          <label for="foto">Foto de perfil</label><br>
+          <input type="file" id="foto" name="foto" accept="image/*">
+        </p>
+        <p>
+          <label for="bio">Biografia</label><br>
+          <textarea id="bio" name="bio" rows="4" cols="40" maxlength="300" placeholder="Conte um pouco sobre você e sua arte (até 300 caracteres)"></textarea>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Estilo e experiência</legend>
+        <p>
+          <label for="estilo">Estilo predominante</label><br>
+          <input type="text" id="estilo" name="estilo" list="lista-estilos" placeholder="Ex.: Romantismo">
+          <datalist id="lista-estilos">
+            <option value="Neoclassicismo">
+            <option value="Romantismo">
+            <option value="Realismo">
+            <option value="Impressionismo">
+            <option value="Surrealismo">
+            <option value="Arte digital">
+            <option value="Fantasia">
+          </datalist>
+        </p>
+        <p>
+          <label for="experiencia">Anos de experiência (0 a 30)</label><br>
+          <input type="range" id="experiencia" name="experiencia" min="0" max="30" step="1" value="5">
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Compartilhar uma obra</legend>
+        <p>
+          <label for="titulo">Título da obra *</label><br>
+          <input type="text" id="titulo" name="titulo" placeholder="Ex.: Noite sobre o lago" required>
+        </p>
+        <p>
+          <label for="arquivo">Arquivo da obra *</label><br>
+          <input type="file" id="arquivo" name="arquivo" accept="image/png, image/jpeg, image/webp" required>
+        </p>
+        <p>Visibilidade:</p>
+        <p>
+          <input type="radio" id="pub" name="visibilidade" value="publico" checked>
+          <label for="pub">Pública</label>
+          <input type="radio" id="priv" name="visibilidade" value="privado">
+          <label for="priv">Somente eu</label>
+        </p>
+        <p>
+          <input type="checkbox" id="autoria" name="autoria" required>
+          <label for="autoria">Declaro que sou o autor da obra ou tenho permissão para compartilhá-la. *</label>
+        </p>
+      </fieldset>
+
+      <p>
+        <button type="submit">Criar perfil</button>
+        <button type="reset">Limpar</button>
+      </p>
+    </form>
+  </section>
+
+  <aside>
+    <h2>Dicas para o seu perfil</h2>
+    <article>
+      <h3>Boa imagem</h3>
+      <p>Prefira arquivos JPEG ou PNG e informe sempre título, autoria e ano.</p>
+    </article>
+    <article>
+      <h3>Direitos autorais</h3>
+      <p>Só compartilhe o que é seu ou o que você tem permissão para publicar.</p>
+    </article>
+  </aside>
+</main>
+<footer>
+  <p>&copy; 2026 luis mangueira. </p>
+  <p>Obras de domínio público; os créditos de cada imagem estão nas legendas.</p>
+</footer>
+</body>
+</html>
